@@ -1,16 +1,8 @@
 ---
 name: noticias-cangrejo
-description: Fetch and summarize recent news articles from GNews for any user-provided topic, then produce a Markdown digest with date, greeting, and top links. Use when a user asks for current news briefings, topic-based updates, multilingual headline digests, or wants repeatable GNews-powered summaries that can be published through OpenClaw/ClawHub.
-category: data
-tags: news, api, gnews, digest
-metadata:
-  clawdbot:
-    emoji: "🦀"
-    requires:
-      api_key:
-        name: GNEWS_API_KEY
-        label: "GNews API Key"
-        description: "Enter your GNews API key from gnews.io"
+description: Fetch and summarize recent news articles from GNews for any user-provided topic, then produce a Markdown digest with date, greeting, and top links.
+homepage: https://gnews.io/
+metadata: {"clawdbot":{"emoji":"🦀","requires":{"env":["GNEWS_API_KEY"]}}}
 ---
 
 # NoticiasCangrejo
@@ -45,9 +37,10 @@ Set this environment variable before execution:
 
 No `pip install` is required.
 
-Use the bundled entrypoint:
+Use the bundled entrypoint from the installed skill folder:
 
 ```bash
+cd ~/.openclaw/workspace/skills/noticias-cangrejo
 ./noticias-cangrejo "quantum computing"
 ```
 
@@ -61,5 +54,6 @@ Optional parameters:
 
 ```bash
 export GNEWS_API_KEY="your_api_key_here"
+cd ~/.openclaw/workspace/skills/noticias-cangrejo
 ./noticias-cangrejo "global markets" --lang en --max-articles 20 --output ./markets.md
 ```
