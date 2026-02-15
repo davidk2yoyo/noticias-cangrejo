@@ -43,16 +43,12 @@ Set this environment variable before execution:
 
 ## Execution
 
-Install dependencies:
+No `pip install` is required.
+
+Use the bundled entrypoint:
 
 ```bash
-pip install -r requirements.txt
-```
-
-Run the script:
-
-```bash
-python3 scripts/fetch_news.py "quantum computing"
+./noticias-cangrejo "quantum computing"
 ```
 
 Optional parameters:
@@ -65,5 +61,5 @@ Optional parameters:
 
 ```bash
 export GNEWS_API_KEY="your_api_key_here"
-python3 scripts/fetch_news.py "global markets" --lang en --max-articles 20 --output ./markets.md
+./noticias-cangrejo "global markets" --lang en --max-articles 20 --output ./markets.md
 ```
