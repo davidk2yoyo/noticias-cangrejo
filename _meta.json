@@ -1,0 +1,11 @@
+{
+  "slug": "noticias-cangrejo",
+  "version": "1.0.1",
+  "run": {
+    "command": "python3",
+    "args": [
+      "scripts/fetch_news.py",
+      "{topic}"
+    ]
+  }
+}

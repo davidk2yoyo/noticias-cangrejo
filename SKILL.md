@@ -35,13 +35,10 @@ Set this environment variable before execution:
 
 ## Execution
 
-No `pip install` is required.
-
-Use the bundled entrypoint from the installed skill folder:
+Canonical OpenClaw execution is defined in `_meta.json` under `run`:
 
 ```bash
-cd ~/.openclaw/workspace/skills/noticias-cangrejo
-./noticias-cangrejo "quantum computing"
+python3 scripts/fetch_news.py "<topic>"
 ```
 
 Optional parameters:
@@ -54,6 +51,5 @@ Optional parameters:
 
 ```bash
 export GNEWS_API_KEY="your_api_key_here"
-cd ~/.openclaw/workspace/skills/noticias-cangrejo
-./noticias-cangrejo "global markets" --lang en --max-articles 20 --output ./markets.md
+python3 scripts/fetch_news.py "global markets" --lang en --max-articles 20 --output ./markets.md
 ```
